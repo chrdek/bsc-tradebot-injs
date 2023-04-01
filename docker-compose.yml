@@ -23,7 +23,7 @@ services:
       # - BINANCE_MODE=live
       - BINANCE_REDIS_HOST=binance-redis
       - BINANCE_REDIS_PORT=6379
-      - BINANCE_REDIS_PASSWORD=secretp422
+      - BINANCE_REDIS_PASSWORD=
       - BINANCE_TRADINGVIEW_HOST=tradingview
       - BINANCE_TRADINGVIEW_PORT=8082
     ports:
@@ -50,7 +50,7 @@ services:
     logging:
       driver: 'json-file'
       options:
-        max-size: '50m'
+        max-size: '10m'
 
   binance-redis:
     container_name: binance-redis
